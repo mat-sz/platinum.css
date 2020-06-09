@@ -1,0 +1,54 @@
+{
+  "name": "platinum.css",
+  "version": "0.0.1",
+  "description": "MacOS 9 inspired CSS UI library.",
+  "main": "build/platinum.css",
+  "author": "Mat Sz <contact@matsz.dev>",
+  "keywords": [
+    "css",
+    "macos",
+    "platinum",
+    "ui",
+    "retro"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mat-sz/platinum.css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mat-sz/platinum.css/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "build.js": [
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "build": "node build.js",
+    "prepare": "npm run build"
+  },
+  "homepage": "https://github.com/mat-sz/platinum.css",
+  "license": "BSD-3-Clause-Clear",
+  "dependencies": {},
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.9",
+    "node-sass": "^4.14.1",
+    "postcss-calc": "^7.0.2",
+    "postcss-copy": "^7.1.0",
+    "postcss-css-variables": "^0.17.0",
+    "postcss-inline": "^1.2.0",
+    "postcss-inline-svg": "^4.1.0",
+    "postcss-scss": "^2.1.1",
+    "prettier": "^2.0.5"
+  }
+}
