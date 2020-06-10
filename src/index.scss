@@ -1,2 +1,41 @@
-body {
+.window {
+  position: relative;
+  padding: 1px;
+  background: #cecece;
+  box-shadow: -1px -1px 0px 0px #ffffff, 0px -1px 0px 0px #ffffff,
+    -1px 0px 0px 0px #ffffff, 1px 1px 0px 0px #9c9c9c, 1px 0px 0px 0px #9c9c9c,
+    0px 1px 0px 0px #9c9c9c, 1px -1px 0px 0px #cecece, -1px 1px 0px 0px #cecece,
+    0px 0px 0px 2px #000000;
+}
+
+@function title-bar-text-shadow() {
+  $box-shadow: '';
+  @for $i from 1 through 4 {
+    $shadows: '0px ' +
+      ($i * 2 - 1) +
+      'px 0px 0px white, 1px ' +
+      ($i * 2) +
+      'px 0px 0px #737373';
+    $box-shadow: $box-shadow + $shadows + ', ';
+  }
+  @return str_slice(unquote($box-shadow), 0, str_length($box-shadow)-2);
+}
+
+.title-bar {
+  .title-bar-text {
+    display: flex;
+    font-size: 8px;
+
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      flex: 1;
+
+      height: 1px;
+      margin: 0 3px;
+
+      box-shadow: title-bar-text-shadow();
+    }
+  }
 }
