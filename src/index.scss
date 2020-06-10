@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 .window {
   position: relative;
-  padding: 1px;
+  padding: 2px;
   background: #cecece;
   box-shadow: -1px -1px 0px 0px #ffffff, 0px -1px 0px 0px #ffffff,
     -1px 0px 0px 0px #ffffff, 1px 1px 0px 0px #9c9c9c, 1px 0px 0px 0px #9c9c9c,
@@ -10,10 +14,10 @@
 
 @function title-bar-text-shadow() {
   $box-shadow: '';
-  @for $i from 1 through 4 {
+  @for $i from 1 through 6 {
     $shadows: '0px ' +
       ($i * 2 - 1) +
-      'px 0px 0px white, 1px ' +
+      'px 0px 0px #ffffff, 1px ' +
       ($i * 2) +
       'px 0px 0px #737373';
     $box-shadow: $box-shadow + $shadows + ', ';
@@ -22,9 +26,16 @@
 }
 
 .title-bar {
+  display: flex;
+  align-items: center;
+  padding-right: 1px;
+
   .title-bar-text {
     display: flex;
-    font-size: 8px;
+    align-items: center;
+    font-size: 9px;
+    flex: 1;
+    margin: 0 2px;
 
     &:after,
     &:before {
@@ -34,8 +45,38 @@
 
       height: 1px;
       margin: 0 3px;
+      margin-bottom: 13px;
 
       box-shadow: title-bar-text-shadow();
+    }
+  }
+
+  .title-bar-controls {
+    line-height: 1px;
+    margin-top: 1px;
+
+    button {
+      padding: 0;
+      border: 1px solid #212121;
+      background: linear-gradient(135deg, #9c9c9c 0%, #ffffff 100%);
+      box-shadow: -1px -1px 0px 0px #8c8c8c, 1px 1px 0px 0px #ffffff,
+        inset 1px 0px 0px 0px #cecece, inset 0px 1px 0px 0px #cecece,
+        inset -1px -1px 0px 0px #8c8c8c;
+      width: 11px;
+      height: 11px;
+      position: relative;
+      margin-left: 1px;
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 1px;
+        background: #ffffff;
+      }
     }
   }
 }
