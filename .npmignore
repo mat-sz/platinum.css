@@ -1,3 +1,5 @@
 build.js
 .prettierrc
 yarn.lock
+demo
+gulpfile.js

@@ -33,13 +33,17 @@
   },
   "scripts": {
     "build": "node build.js",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "dev": "gulp"
   },
   "homepage": "https://github.com/mat-sz/platinum.css",
   "license": "BSD-3-Clause-Clear",
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
     "node-sass": "^4.14.1",
