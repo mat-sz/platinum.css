@@ -43,9 +43,10 @@
   .title-bar-text {
     display: flex;
     align-items: center;
-    font-size: 9px;
+    font-size: 11.5px;
     flex: 1;
     margin: 0 2px;
+    margin-top: 1px;
 
     &:after,
     &:before {
@@ -56,6 +57,7 @@
       height: 1px;
       margin: 0 3px;
       margin-bottom: 13px;
+      margin-top: -1px;
 
       box-shadow: title-bar-text-shadow();
     }
