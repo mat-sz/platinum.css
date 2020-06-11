@@ -1,3 +1,10 @@
+/* Colors */
+$surface: #dedede;
+$window-frame: #cecece;
+$shadow-white: #ffffff;
+$shadow-light: #9c9c9c;
+$shadow-black: #000000;
+
 * {
   box-sizing: border-box;
 }
@@ -5,19 +12,20 @@
 .window {
   position: relative;
   padding: 2px;
-  background: #cecece;
-  box-shadow: -1px -1px 0px 0px #ffffff, 0px -1px 0px 0px #ffffff,
-    -1px 0px 0px 0px #ffffff, 1px 1px 0px 0px #9c9c9c, 1px 0px 0px 0px #9c9c9c,
-    0px 1px 0px 0px #9c9c9c, 1px -1px 0px 0px #cecece, -1px 1px 0px 0px #cecece,
-    0px 0px 0px 2px #000000;
+  background: $window-frame;
+  box-shadow: -1px -1px 0px 0px $shadow-white, 0px -1px 0px 0px $shadow-white,
+    -1px 0px 0px 0px $shadow-white, 1px 1px 0px 0px $shadow-light,
+    1px 0px 0px 0px $shadow-light, 0px 1px 0px 0px $shadow-light,
+    1px -1px 0px 0px $window-frame, -1px 1px 0px 0px $window-frame,
+    0px 0px 0px 2px $shadow-black;
 
   &-body {
-    background: #dedede;
+    background: $surface;
     margin: 1px;
-    border: 1px solid #000000;
-    box-shadow: 0px 1px 0px 0px #ffffff, 1px 0px 0px 0px #ffffff,
-      1px 1px 0px 0px #ffffff, -1px 0px 0px 0px #9c9c9c,
-      0px -1px 0px 0px #9c9c9c, -1px -1px 0px 0px #9c9c9c;
+    border: 1px solid $shadow-black;
+    box-shadow: 0px 1px 0px 0px $shadow-white, 1px 0px 0px 0px $shadow-white,
+      1px 1px 0px 0px $shadow-white, -1px 0px 0px 0px $shadow-light,
+      0px -1px 0px 0px $shadow-light, -1px -1px 0px 0px $shadow-light;
   }
 }
 
@@ -85,8 +93,8 @@
     button {
       padding: 0;
       border: 1px solid #212121;
-      background: linear-gradient(135deg, #9c9c9c 0%, #ffffff 100%);
-      box-shadow: -1px -1px 0px 0px #8c8c8c, 1px 1px 0px 0px #ffffff,
+      background: linear-gradient(135deg, $shadow-light 0%, $shadow-white 100%);
+      box-shadow: -1px -1px 0px 0px #8c8c8c, 1px 1px 0px 0px $shadow-white,
         inset 1px 0px 0px 0px #cecece, inset 0px 1px 0px 0px #cecece,
         inset -1px -1px 0px 0px #8c8c8c;
       width: 11px;
@@ -102,7 +110,7 @@
         left: 0;
         width: 1px;
         height: 1px;
-        background: #ffffff;
+        background: $shadow-white;
       }
     }
   }
