@@ -6,6 +6,7 @@
 # testing
 /coverage
 demo/css
+demo/assets
 
 # production
 /build

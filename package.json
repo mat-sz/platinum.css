@@ -43,6 +43,7 @@
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
@@ -53,6 +54,7 @@
     "postcss-inline": "^1.2.0",
     "postcss-inline-svg": "^4.1.0",
     "postcss-scss": "^2.1.1",
+    "postcss-url": "^8.0.0",
     "prettier": "^2.0.5"
   }
 }

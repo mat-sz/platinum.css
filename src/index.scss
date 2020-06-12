@@ -5,8 +5,21 @@ $shadow-white: #ffffff;
 $shadow-light: #9c9c9c;
 $shadow-black: #000000;
 
+/* Fonts */
+@font-face {
+  font-family: 'Charcoal';
+  src: url('../fonts/charcoal/charcoal.woff2') format('woff2'),
+    url('../fonts/charcoal/charcoal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Charcoal', 'Courier New', Courier, monospace;
 }
 
 .window {
