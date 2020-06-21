@@ -3,6 +3,10 @@ platinum.css
 </h1>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/mat-sz/platinum.css/master/window.png" alt="Screenshot">
+</p>
+
+<p align="center">
 Pixel perfect recreation of MacOS 9's Platinum UI.
 </p>
 
