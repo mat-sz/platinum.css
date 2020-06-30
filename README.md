@@ -23,3 +23,9 @@ Inspired by [98.css](https://github.com/jdan/98.css) (build.js and markup were t
 ## Installation
 
 This library is not ready for use yet.
+
+## Development
+
+Run `npm install`, the source files are in `src` (with the entry file being `src/index.scss`).
+
+For live reload, `npm start` can be used. If a build is needed, run `npm run build`.
